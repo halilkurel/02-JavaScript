@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const ogrenciler = new Map();   //Key value dizisi oluşturuur
+        ogrenciler.set(1,"ali Yılmaz");     // Öğrenciler e bir key value ekler
+        ogrenciler.set("54588785412","efe can");
+        ogrenciler.set(true,"Ali efe");
+        console.log(ogrenciler.get(1)); //1 key'inde sahip value yi yazdırır
+
+        let sonuc;
+        sonuc = ogrenciler.size;    // Toplam kaç öğrenci var
+        sonuc = ogrenciler.has(1);    // Herhangi bir veri var mı true/false döner
+        //ogrenciler.delete(1);       // Silme işlemi yapar
+        //ogrenciler.clear();         //tüm verileri siler
+
+        //Ogrenciler içerisinde tüm keyleri yazdır
+        for(let x of ogrenciler.keys()){
+            console.log(x);
+        }
+        //Ogrenciler içerisinde tüm value yazdır
+        for(let x of ogrenciler.values()){
+            console.log(x);
+        }
+        //Ogrenciler içerisinde tüm value/key yazdır
+        for(let [key,value] of ogrenciler.entries()){
+            console.log(value);
+        }
+
+        console.log(sonuc);
+    </script>
+</body>
+</html>

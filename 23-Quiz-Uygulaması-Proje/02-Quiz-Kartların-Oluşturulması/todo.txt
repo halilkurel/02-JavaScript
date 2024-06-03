@@ -1,0 +1,5 @@
+- fontawesome ve bootstrap kütüphanelerini ekledik
+- index.html' e start-quiz i ekledik ve butonu oluşturduk.
+- css kısmına .start-quiz kodlarını yazdık
+- index e card kodlarını yazdık bir soru ve 4 cevap ekledik
+- style a   .btn_start,.quiz_box ekledik ve start butonu ve soru kartı ekranın tam ortasında.

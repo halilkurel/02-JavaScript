@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Promise
+
+
+        //Server Durumu
+        const serverStatus = false;
+
+
+        //Promise yapısı resolve vew reject ten oluşur. serverStatus true olduğunda resolve false olduğunda reject çalışır
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (serverStatus) {
+                    resolve({ username: "Halilkurel" });
+                }
+                else {
+                    reject("error login");
+                }
+            }, 2000);
+
+        });
+
+        //then ile true durumu catch ile false duruma ulaşırız
+        promise.then(user => {
+            console.log(user);
+        }).catch(err => {
+            console.log(err);
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

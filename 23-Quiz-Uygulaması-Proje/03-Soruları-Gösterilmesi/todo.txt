@@ -1,0 +1,1 @@
+- .question-text içindeki spanı ve option-list içini  kapatalım.

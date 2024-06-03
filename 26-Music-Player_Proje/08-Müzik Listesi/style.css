@@ -1,0 +1,25 @@
+/*1-Containerı sayfanın ortasına alalım*/
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*3-Genişliği 400 yapalım*/
+.container{
+    width: 400px;
+}
+
+/*6-.cardfooter ve volume-container ekleyelim */
+/*controls ekleyelim*/
+#progress .times,.card-footer, .volume-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*7-*/
+.volume-container i{
+    margin-right: 10px;
+}

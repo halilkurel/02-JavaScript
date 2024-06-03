@@ -1,0 +1,33 @@
+/*2-*/
+.container{
+    width: 350px;
+}
+
+
+#controls i{
+    font-size: 30px;
+    color: purple;
+    margin-right: 20px;
+}
+
+/*3-*/
+#progress {
+    margin-bottom: 20px;
+}
+
+/*4-*/
+#progress-bar{
+    width: 100%;
+}
+
+/*4-*/
+#progress .times{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*5-*/
+#music-image{
+    width: 100%;
+}

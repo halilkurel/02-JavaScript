@@ -1,0 +1,6 @@
+ - Bu zamana kadar javaScript'in ES5 versiyonlarında çalıştık. ES5 versiyonu tüm tarayıcılar tarafından desteklenmektedir.
+ES6 ve ES7 de yazzdığımız kodları ES5 e çevirmek gerekir. Bunun için Babel.js Kütüphanesi kullanılabilir.
+
+ - React.js node.js gibi kütüphanelerde babel.js zaten kurulu olarak gelir.
+
+ 

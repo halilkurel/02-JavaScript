@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const sayilar = [1, 5, 7, 3, 2, 67];
+        // const tekSAyilar =[];
+
+        // for(let sayi of sayilar){
+        //     if(sayi %2==1){
+        //         tekSAyilar.push(sayi);
+        //     }
+        // }
+
+        // console.log(tekSAyilar);
+
+        //Yukarıdaki işlemi daha basit bir şekilde yapabiliriz.
+
+        const tekSayiKontrol = (sayi) => sayi % 2 == 1; //Sayi 2 ye bölümünden kalan 1 ise true dondürür.
+
+        const tekSayilar = sayilar.filter(tekSayiKontrol); // tekSayilar listesi oluşturur ve true olan değerleri ekler
+        //tekSayiKontrol metotunu direk filter içerisindede yazabiliriz.
+        console.log(tekSayilar);
+
+
+
+        //Filter ve map metotları
+        const ürünler = [
+            { ürünadi: "ipohe11", fiyat: 12000 },
+            { ürünadi: "ipohe12", fiyat: 15000 },
+            { ürünadi: "ipohe13", fiyat: 18000 },
+            { ürünadi: "ipohe14", fiyat: 22000 },
+        ];
+
+        //map metotu filtreleme yapmadan tüm elemanlar üzerinde gezinir ve döner
+        const maplenen = ürünler.map(ürün => ürün.fiyat);
+        console.log(maplenen);
+
+        //filter metotu filtreleme yaparak istediğimiz sonuçları getitir
+        const filtreleme = ürünler.filter(ürün => ürün.fiyat > 16000);
+        console.log(filtreleme);
+
+        //filtrelenen elemanlarının sadece adlarını görmek istersek
+        const sonuc = filtreleme.map(x => x.ürünadi);
+        console.log(sonuc);
+
+        //find metotu bulduğu ilk değeri döndürür
+        const find = ürünler.find(ürün => ürün.fiyat > 15000);
+        console.log(find);
+
+        //findIndex metotu bulduğu ilk index'i döndürür
+        const findIndex = ürünler.findIndex(ürün => ürün.fiyat > 15000);
+        console.log(findIndex);
+
+
+
+
+    </script>
+</body>
+
+</html>

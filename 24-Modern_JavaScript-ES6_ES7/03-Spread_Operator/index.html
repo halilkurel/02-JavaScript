@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const msj = ["benim","adım","halil","kürel"];
+        let sonuc;
+        for(let x of msj){
+            sonuc += x+" ";
+        }
+        console.log(sonuc);
+        //yukarıdaki for döngüsü yerine 3 nokta kullanarak işlemi halledebiliriz
+        console.log(...msj);
+
+
+        //2. Örnek
+        const dizi1 =["bir","iki"];
+        const dizi2 =["üç","dört"];
+        const dizi3 =[...dizi1,...dizi2];
+
+        console.log(dizi3);
+
+
+        //3.Örnek
+        //value olarak yaptığımızda sayılar 1'in değerleri aynı kalır
+        const sayilar1 =[1,2,3];
+        const sayilar2 =sayilar1; //referans copy
+        const sayilar3 =[...sayilar1]; //value copy
+        sayilar3[0]=10;
+        console.log(sayilar1,sayilar3);
+
+
+
+    </script>
+</body>
+</html>

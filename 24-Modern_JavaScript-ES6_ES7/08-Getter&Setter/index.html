@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class KisiES6 {
+            constructor(ad, meslek, dogumYili) {
+                this.ad = ad;
+                this.meslek = meslek;
+                this.dogumYili = dogumYili;
+            }
+
+            yasHesapla(){
+                var yil = new Date().getFullYear();
+                return yil- this.dogumYili;
+            }
+
+            get ad(){
+                return this._ad;
+            }
+            set ad(value){
+                if(value.length <3){
+                    console.log("Yetersiz KArakter");
+                    return;
+                }
+                this._ad = value;
+            }
+
+            get dogumYili(){
+                return this._dogumYili;
+            }
+            set dogumYili(value){
+                if( value < 1990 || value> new Date().getFullYear()){
+                    console.log("tarih bilgisi yanlış");
+                    return;
+                }
+                this._dogumYili = value;
+            }
+        }
+
+        let kisi1 = new KisiES6("Halil Kürel","Çalışan",1995);
+        console.log(kisi1.yasHesapla());
+
+    </script>
+</body>
+</html>

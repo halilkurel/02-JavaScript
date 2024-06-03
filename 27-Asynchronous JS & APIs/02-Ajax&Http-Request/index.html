@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Dışarıdan bir api ile veri alalım ve bu ülke bilgileri ile alakalı olsun
+        const request = new XMLHttpRequest();
+
+        //open ile işlemin get mi post mu olacağını ve servis linkini yazıyoruz
+        request.open('GET', 'https://restcountries.com/v3.1/name/turkey');
+        //Ve servise gönderiyoruz
+        request.send();
+
+        // load adında bir event oluşturduk ve veri bize string olarak dönüyor. String bir veriye data[0] ve data. şeklinde ulaşamayız. JSON formatına çevirmeliyiz.
+        request.addEventListener("load", function(){
+            const data = this.responseText;
+            console.log(typeof data);
+        });
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Kisi{
+            constructor(ad,dogumYili){
+                this.ad = ad;
+                this.dogumYili = dogumYili;
+                console.log("Kişi");
+            }
+
+            yasHesapla(){
+                let tarih = new Date().getFullYear();
+                return tarih - this.dogumYili;
+            }
+        }
+
+        class Ogrenci extends Kisi{
+            constructor(ad, dogumYili, okulNumarası){
+                super(ad, dogumYili);
+                this.okulNumarası = okulNumarası;
+                console.log("Öğrenci")
+            }
+
+            dersCalis(){
+                return "Ders Çalış";
+            }
+        }
+
+        let kisi = new Kisi("ali",1990);
+        let ogrenci = new Ogrenci("Halil",1995,365);
+        console.log(ogrenci.dersCalis());
+        
+    </script>
+</body>
+</html>
